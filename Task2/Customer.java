@@ -1,9 +1,7 @@
 package Task2;
-
 import java.util.ArrayList;
 import java.util.List;
 
-//Class representing a Customer
 class Customer {
  String customerId;
  private String name;
@@ -12,13 +10,14 @@ class Customer {
  private int age;
  private List<Ticket> tickets;
 
- public Customer(String customerId, String name, String address, int phoneNo, int age) {
+ public Customer(String customerId, String name, 
+ String address, int phoneNo, int age) {
      this.customerId = customerId;
      this.name = name;
      this.address = address;
      this.phoneNo = phoneNo;
      this.age = age;
-     this.tickets = new ArrayList<>(); // Initialize the list
+     this.tickets = new ArrayList<>(); 
  }
 
  public void addTicket(Ticket ticket) {
