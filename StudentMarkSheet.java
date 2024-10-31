@@ -28,7 +28,8 @@ public class StudentMarkSheet {
         }
     }
 
-    public static void displayMarkSheet(String studentName, double obtainedMarks, double totalMarks, double percentage, char grade, double gpa) {
+    public static void displayMarkSheet(String studentName, double obtainedMarks, 
+    double totalMarks, double percentage, char grade, double gpa) {
         System.out.println("\n--- Mark Sheet ---");
         System.out.printf("Student Name: %s\n", studentName);
         System.out.printf("Total Marks: %.2f\n", totalMarks);
@@ -42,7 +43,7 @@ public class StudentMarkSheet {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Input
+
         System.out.print("Enter the student's name: ");
         String studentName = scanner.nextLine();
         System.out.print("Enter the total marks: ");
@@ -50,15 +51,12 @@ public class StudentMarkSheet {
         System.out.print("Enter the obtained marks: ");
         double obtainedMarks = scanner.nextDouble();
 
-        // Calculations
         double percentage = calculatePercentage(obtainedMarks, totalMarks);
         char grade = determineGrade(percentage);
         double gpa = calculateGPA(grade);
 
-        // Display results
         displayMarkSheet(studentName, obtainedMarks, totalMarks, percentage, grade, gpa);
 
-        // Close the scanner
         scanner.close();
     }
 }
