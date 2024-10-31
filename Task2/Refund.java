@@ -1,6 +1,4 @@
 package Task2;
-
-//Class for handling refunds
 class Refund {
  private float amount;
  private String customerId;
@@ -11,6 +9,7 @@ class Refund {
  }
 
  public void refundAmount() {
-     System.out.println("Refunding " + amount + " to customer " + customerId);
+     System.out.println("Refunding " + amount + 
+      " to customer " + customerId);
  }
 }
