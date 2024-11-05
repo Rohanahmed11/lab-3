@@ -1,32 +1,57 @@
 package Task2;
-import java.util.ArrayList;
-import java.util.List;
+public class Customer {
+    private String custmerId;
+    private String name;
+    private String address;
+    private int phNo;
+    private int age;
 
-class Customer {
- String customerId;
- private String name;
- private String address;
- private int phoneNo;
- private int age;
- private List<Ticket> tickets;
+    public void addDetails() {
+        System.out.println("Adding details for customer " + name);
+    }
 
- public Customer(String customerId, String name, 
- String address, int phoneNo, int age) {
-     this.customerId = customerId;
-     this.name = name;
-     this.address = address;
-     this.phoneNo = phoneNo;
-     this.age = age;
-     this.tickets = new ArrayList<>(); 
- }
+    public void modifyDetails() {
+        System.out.println("Modifying details for customer " + name);
+    }
 
- public void addTicket(Ticket ticket) {
-     tickets.add(ticket);
- }
+    // Getters and Setters
+    public String getCustmerId() {
+        return custmerId;
+    }
 
- public List<Ticket> getTickets() {
-     return tickets;
- }
+    public void setCustmerId(String custmerId) {
+        this.custmerId = custmerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getPhNo() {
+        return phNo;
+    }
+
+    public void setPhNo(int phNo) {
+        this.phNo = phNo;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
-
-
