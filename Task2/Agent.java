@@ -1,30 +1,46 @@
 package Task2;
-class Agent implements CommonFunctions {
- private int id;
- private String name;
+public class Agent implements CommonFunctions {
+    private int id;
+    private String name;
 
- public Agent(int id, String name) {
-     this.id = id;
-     this.name = name;
- }
- @Override
- public void searchTicket() {
-     System.out.println("Searching for tickets...");
- }
- @Override
- public void bookTicket() {
-     System.out.println("Booking a ticket...");
- }
- @Override
- public void cancelTicket() {
-     System.out.println("Cancelling a ticket...");
- }
- @Override
- public void makePayment() {
-     System.out.println("Making payment...");
- }
- @Override
- public void fillDetails() {
-     System.out.println("Filling details...");
- }
+    @Override
+    public void searchTicket() {
+        System.out.println("Agent " + name + " is searching for tickets.");
+    }
+
+    @Override
+    public void bookTicket() {
+        System.out.println("Agent " + name + " is booking a ticket.");
+    }
+
+    @Override
+    public void cancelTicket() {
+        System.out.println("Agent " + name + " is canceling a ticket.");
+    }
+
+    @Override
+    public void makePayment() {
+        System.out.println("Agent " + name + " is making a payment.");
+    }
+
+    @Override
+    public void fillDetail() {
+        System.out.println("Agent " + name + " is filling details.");
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
