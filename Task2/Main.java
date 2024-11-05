@@ -1,23 +1,33 @@
 package Task2;
 import java.util.Date;
 public class Main {
- public static void main(String[] args) {
-     Customer customer = new Customer("C001", "John Doe", "123 Main St", 1234567890, 30);
-     Agent agent = new Agent(1, "Agent Smith");
+    public static void main(String[] args) {
 
-     Ticket ticket = new Ticket("City A", "City B", new Date(), "10:00 AM", "Bus 123", "A1");
-     customer.addTicket(ticket);
+        Customer customer = new Customer();
+        customer.setCustmerId("C002");
+        customer.setName("Salman Khan");
+        customer.setAddress("P-220 BLOCK N NORTH NAZIMABAD KARACHI");
+        customer.setPhNo(123456789);
+        customer.setAge(30);
+        customer.addDetails();
+        System.out.println("Customer details added");
 
-     agent.searchTicket();
-     agent.bookTicket();
-     agent.makePayment();
+        Agent agent = new Agent();
+        agent.setId(1);
+        agent.setName("Rohan");
+        System.out.println("Agent Name: " + agent.getName());
 
-     System.out.println("Customer Tickets:");
-     for (Ticket t : customer.getTickets()) {
-         System.out.println(t);
-     }
+        agent.searchTicket();
+        System.out.println("Agent searched for a ticket.");
+        agent.bookTicket();
+        System.out.println("Agent booked a ticket.");
 
-     Refund refund = new Refund(50.0f, customer.customerId);
-     refund.refundAmount();
- }
+        Ticket ticket = new Ticket("KARACHI", "LAHORE", new Date(), "10:00 AM", "Bus123", "Seat22");
+        System.out.println("Ticket booked from " + ticket.getSource() + " to " + ticket.getDestination());
+
+        Refund refund = new Refund(50.50f , customer.getCustmerId());
+        refund.refundAmount();
+        System.out.println("Refund processed for customer: " + refund.getCustomerId() 
+        + " with amount $" + refund.getAmount());
+    }
 }
